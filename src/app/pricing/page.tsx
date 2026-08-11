@@ -60,7 +60,7 @@ export default function PricingPage() {
           {/* The cards speak for themselves visually; the heading keeps the
               document outline intact for assistive technology. */}
           <h2 className="sr-only">Plans</h2>
-          <PricingTiers headingLevel={3} />
+          <PricingTiers />
         </Container>
       </section>
 
@@ -73,8 +73,12 @@ export default function PricingPage() {
             The full breakdown, so you do not have to guess which line matters.
           </p>
 
+          <p className="mt-6 text-xs text-muted-foreground sm:hidden">
+            Scroll the table sideways to compare all three plans.
+          </p>
+
           {/* Wide table scrolls inside its own container — the page never does. */}
-          <div className="mt-10 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
+          <div className="mt-4 -mx-5 overflow-x-auto px-5 sm:mt-10 sm:mx-0 sm:px-0">
             <table className="w-full min-w-[38rem] border-collapse text-left">
               <caption className="sr-only">
                 Feature comparison across the Starter, Team and Scale plans

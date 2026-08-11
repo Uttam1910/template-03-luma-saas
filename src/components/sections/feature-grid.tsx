@@ -9,7 +9,7 @@ import { cn } from "@/lib/cn";
  */
 export function FeatureGrid({
   eyebrow = "Why Luma",
-  title = "Everything the work needs. Nothing it doesn't.",
+  title = "Everything the work needs. Nothing it doesn’t.",
   description = "Six ideas hold the whole product together. Each one exists to remove a step your team is doing by hand today.",
 }: {
   eyebrow?: string;

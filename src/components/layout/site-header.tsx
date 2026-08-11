@@ -35,7 +35,7 @@ export function SiteHeader() {
             </Link>
             <Link
               href={cta.primary.href}
-              className={buttonClass("primary", "sm", "hidden md:inline-flex")}
+              className={buttonClass("primary", "sm")}
             >
               {cta.primary.label}
             </Link>

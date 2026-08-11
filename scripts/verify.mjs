@@ -14,6 +14,16 @@ const APP_DIR = ".next/server/app";
 
 const ROUTES = new Set(["/", "/features", "/pricing", "/about", "/contact"]);
 
+/** Files served straight from public/, plus routes Next generates for us. */
+const ASSETS = new Set(
+  (await readdir("public").catch(() => [])).map((name) => `/${name}`),
+);
+const GENERATED = new Set([
+  "/sitemap.xml",
+  "/robots.txt",
+  "/manifest.webmanifest",
+]);
+
 const failures = [];
 const notes = [];
 
@@ -78,8 +88,16 @@ function checkLinks(route, html) {
     if (!href.startsWith("/") || href.startsWith("//")) continue;
     const [path] = href.split("#");
     if (path === "") continue; // same-page anchor
-    if (path.startsWith("/_next") || path === "/icon.svg") continue;
-    if (path === "/manifest.webmanifest" || path === "/sitemap.xml") continue;
+    if (path.startsWith("/_next")) continue;
+
+    // Asset references must resolve to a file in public/ or a generated route.
+    if (/\.[a-z0-9]+$/i.test(path)) {
+      if (!ASSETS.has(path) && !GENERATED.has(path)) {
+        fail(`${route}: link to missing asset "${path}"`);
+      }
+      continue;
+    }
+
     if (!ROUTES.has(path)) {
       fail(`${route}: internal link to unknown route "${href}"`);
     }

@@ -51,7 +51,7 @@ export function SiteFooter() {
 
         <div className="mt-6 flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-muted-foreground">
-            © 2026 {site.name}. Template by you.
+            © 2026 {site.name}. A demo brand for this template.
           </p>
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             {legalNav.map((link) => (

@@ -47,7 +47,7 @@ export function ProjectPreview({ className }: { className?: string }) {
                     </p>
                     <div className="mt-2.5 flex items-center justify-between gap-2">
                       <Tag label={card.tag} />
-                      <span className="flex items-center gap-1.5 text-[0.62rem] text-muted-foreground">
+                      <span className="flex items-center gap-1.5 whitespace-nowrap text-[0.62rem] text-muted-foreground">
                         {card.due}
                         <Avatar initials={card.who} className="h-5 w-5" />
                       </span>

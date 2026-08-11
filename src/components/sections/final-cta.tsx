@@ -17,7 +17,7 @@ export function FinalCta({
         <div className="u-edge relative overflow-hidden rounded-panel border border-border bg-surface px-6 py-16 text-center sm:px-12 sm:py-20">
           <div aria-hidden className="pointer-events-none absolute inset-0">
             <div className="u-glow absolute inset-0" />
-            <div className="u-grid absolute inset-0 opacity-60" />
+            <div className="u-grid u-mask-b absolute inset-0 opacity-60" />
           </div>
 
           <div className="relative mx-auto max-w-xl">

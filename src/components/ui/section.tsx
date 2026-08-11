@@ -4,20 +4,16 @@ import { Container } from "@/components/ui/container";
 export function Section({
   id,
   className,
-  containerClassName,
   children,
-  as: Tag = "section",
 }: {
   id?: string;
   className?: string;
-  containerClassName?: string;
   children: React.ReactNode;
-  as?: "section" | "div";
 }) {
   return (
-    <Tag id={id} className={cn("py-20 sm:py-24 lg:py-28", className)}>
-      <Container className={containerClassName}>{children}</Container>
-    </Tag>
+    <section id={id} className={cn("py-20 sm:py-24 lg:py-28", className)}>
+      <Container>{children}</Container>
+    </section>
   );
 }
 
@@ -46,19 +42,14 @@ export function SectionHeading({
   title,
   description,
   align = "left",
-  headingId,
-  level = 2,
   className,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
-  headingId?: string;
-  level?: 2 | 3;
   className?: string;
 }) {
-  const Heading = level === 2 ? "h2" : "h3";
   return (
     <div
       className={cn(
@@ -68,12 +59,9 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-      <Heading
-        id={headingId}
-        className="max-w-2xl text-3xl font-semibold sm:text-4xl lg:text-[2.6rem] lg:leading-[1.1]"
-      >
+      <h2 className="max-w-2xl text-3xl font-semibold sm:text-4xl lg:text-[2.6rem] lg:leading-[1.1]">
         {title}
-      </Heading>
+      </h2>
       {description ? (
         <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
           {description}

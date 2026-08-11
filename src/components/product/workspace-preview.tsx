@@ -87,7 +87,7 @@ export function WorkspacePreview({ className }: { className?: string }) {
                 key={metric.label}
                 className="rounded-lg border border-border bg-surface p-2.5 sm:p-3"
               >
-                <p className="truncate text-[0.62rem] uppercase tracking-wide text-muted-foreground">
+                <p className="text-[0.62rem] uppercase leading-tight tracking-wide text-muted-foreground">
                   {metric.label}
                 </p>
                 <p className="mt-1 text-lg font-semibold sm:text-xl">

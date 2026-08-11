@@ -42,7 +42,7 @@ const fields: {
     name: "message",
     label: "Message",
     type: "textarea",
-    placeholder: "Tell us a little about your team and what you're trying to fix.",
+    placeholder: "Tell us a little about your team and what you’re trying to fix.",
   },
 ];
 

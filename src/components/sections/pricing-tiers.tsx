@@ -8,9 +8,7 @@ import { cn } from "@/lib/cn";
  * Pricing cards. Shared by the home preview and the pricing page.
  * Demo pricing only — the CTAs go to the contact page, there is no checkout.
  */
-export function PricingTiers({ headingLevel = 3 }: { headingLevel?: 3 | 4 }) {
-  const Heading = headingLevel === 3 ? "h3" : "h4";
-
+export function PricingTiers() {
   return (
     <div>
       <ul className="grid gap-4 lg:grid-cols-3">
@@ -30,7 +28,7 @@ export function PricingTiers({ headingLevel = 3 }: { headingLevel?: 3 | 4 }) {
               </span>
             ) : null}
 
-            <Heading className="text-lg font-semibold">{tier.name}</Heading>
+            <h3 className="text-lg font-semibold">{tier.name}</h3>
             <p className="mt-1.5 min-h-10 text-sm leading-relaxed text-muted-foreground">
               {tier.description}
             </p>

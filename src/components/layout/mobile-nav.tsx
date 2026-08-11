@@ -86,7 +86,7 @@ export function MobileNav({ links }: { links: NavLink[] }) {
             tabIndex={-1}
             aria-hidden
             onClick={close}
-            className="absolute inset-0 h-full w-full cursor-default bg-foreground/25 backdrop-blur-sm"
+            className="u-scrim absolute inset-0 h-full w-full cursor-default backdrop-blur-sm"
           />
           <div
             ref={panelRef}

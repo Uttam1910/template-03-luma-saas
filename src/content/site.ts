@@ -6,9 +6,9 @@ export const site = {
   name: "Luma",
   shortName: "Luma",
   url: "https://luma.example.com",
-  tagline: "Your team's work, finally in focus.",
+  tagline: "Your team’s work, finally in focus.",
   description:
-    "Luma brings your team's work, ideas, and momentum into one clear workspace.",
+    "Luma brings your team’s work, ideas, and momentum into one clear workspace.",
   locale: "en_US",
   twitter: "@lumaworkspace",
   email: "hello@luma.example.com",
